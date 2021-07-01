@@ -1,12 +1,25 @@
+<div class = "login-bg">
 <h2>Sign up</h2>
+
+<div class = "login-form" >
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true %>
   </div>
+
+    <div class="field">
+    <%= f.label :fullname %><br />
+    <%= f.text_field :fullname%>
+  </div>
+
+  <div class="field">
+  <%= f.label :email %><br />
+  <%= f.email_field :email%>
+</div>
 
   <div class="field">
     <%= f.label :password %>
@@ -27,3 +40,6 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</div>
+</div>

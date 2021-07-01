@@ -1,7 +1,7 @@
 
 
 <header> 
-<%=link_to 'Log in', user_session_path%>
+
 </header>
 
 
@@ -13,7 +13,7 @@
     </div>
 
     <div class = "profile-name">
-      EJANE DOE
+      <%=current_user.fullname %>
     </div>
   </div>
 
@@ -34,7 +34,7 @@
   <div class = "nav-links">
     <div><%=link_to 'Home', user_session_path, class: "link-txt"%></div>
     <div><%=link_to 'Profile', user_session_path, class: "link-txt"%></div>
-    <div><%=link_to 'Log out', user_session_path, class: "link-txt"%></div>
+    <div><%=link_to 'Log out', destroy_user_session_path, method: :delete, class: "link-txt"%></div>
   </div>
 </nav>
 
