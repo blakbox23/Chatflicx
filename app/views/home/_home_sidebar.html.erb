@@ -1,0 +1,30 @@
+<div class ="home-side">
+<div class = "home-side-header">
+  WHO TO FOLLOW
+</div>
+
+<div class = "users-list  ">
+
+<% current_user.users_to_follow.each do |follower|%>
+ <div class = "user d-flex">
+
+  <div class = "user-img-container">
+  <%if follower.photo%>
+  <%= image_tag(follower.photo, class: "rounded-circle") %> 
+  <%else%>
+  <img class = "rounded-circle"" src="https://source.unsplash.com/DrVJk1EaPSc" alt="Ppic"> 
+ <%end%>
+  </div>
+
+  <div class = "user-txt m-3 ">
+    <p><%= follower.email%></p>
+  </div>
+ 
+  </div>
+  
+  <%end%>
+
+</div>
+
+
+</div>

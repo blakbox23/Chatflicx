@@ -17,12 +17,14 @@
 
   <div class = "nav-following d-flex">
     <div class="following link-txt">
-    <div class="nav-num"> 184</div>
+    <div class="nav-num"> <%= current_user.followings.count%></div>
+    
       following
     </div>
 
     <div class = "followers link-txt">
-    <div class="nav-num"> 184</div>
+    <div class="nav-num"> <%= current_user.followers.count%></div>
+
       followers
     </div>
   </div>
