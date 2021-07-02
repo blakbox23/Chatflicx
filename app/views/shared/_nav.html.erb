@@ -1,0 +1,35 @@
+<header> 
+
+</header>
+
+
+<nav>
+
+  <div class = "nav-profile">
+    <div class = "profile-pic">
+    <img class = "rounded" src="https://source.unsplash.com/DrVJk1EaPSc" alt="Ppic"> 
+    </div>
+
+    <div class = "profile-name">
+      <%=current_user.fullname %>
+    </div>
+  </div>
+
+  <div class = "nav-following d-flex">
+    <div class="following link-txt">
+    <div class="nav-num"> 184</div>
+      following
+    </div>
+
+    <div class = "followers link-txt">
+    <div class="nav-num"> 184</div>
+      followers
+    </div>
+  </div>
+
+  <div class = "nav-links">
+    <div><%=link_to 'Home', user_session_path, class: "link-txt"%></div>
+    <div><%=link_to 'Profile', user_session_path, class: "link-txt"%></div>
+    <div><%=link_to 'Log out', destroy_user_session_path, method: :delete, class: "link-txt"%></div>
+  </div>
+</nav>
