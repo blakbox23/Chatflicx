@@ -1,0 +1,58 @@
+<div class ="home-side">
+
+  <div class = "user-profile">
+
+  <div class = "profile-photo p-auto">
+  <%if @user.photo%>
+  <%= image_tag(@user.photo, class: "rounded-circle") %> 
+  <%else%>
+  <img class = "rounded-circle" src="https://source.unsplash.com/T3uKisfmABY" alt="Ppic"> 
+  <%end%>
+
+  <p class= "profile-text"><%= @user.fullname%><p>
+  </div>
+
+</div>
+<div class="user-stats d-flex justify-content-around">
+  <div class="border border-1 border-secondary stat">
+  <p class =" stat-num">652</p>
+  <p class="stat-txt">tweets</p>
+  </div>
+  <div class="border  border-1 border-secondary stat">
+  <p class =" stat-num">652</p>
+  <p class="stat-txt">tweets</p>
+  </div>
+  <div class="border  border-1 border-secondary stat">
+  <p class =" stat-num">652</p>
+  <p class="stat-txt">tweets</p>
+  </div>
+</div>
+
+
+
+
+<div class = "users-list  ">
+
+<% current_user.users_to_follow.each do |follower|%>
+ <div class = "user d-flex">
+
+  <div class = "user-img-container">
+  <%if follower.photo%>
+  <%= image_tag(follower.photo, class: "rounded-circle") %> 
+  <%else%>
+  <img class = "rounded-circle"" src="https://source.unsplash.com/DrVJk1EaPSc" alt="Ppic"> 
+ <%end%>
+  </div>
+
+  <div class = "user-txt m-3 ">
+    <p><%= follower.email%></p>
+  </div>
+ 
+  </div>
+  
+  <%end%>
+
+</div>
+
+
+</div>

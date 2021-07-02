@@ -1,0 +1,35 @@
+
+<div class = "home-container">
+<div class ="home-center">
+  <div class = "user-banner">
+    <%if @user.coverimage%>
+    <%= image_tag(@user.coverimage, class: 'banner-pic')%>
+    <%else%>
+    <img class = "banner-pic" src="https://source.unsplash.com/CiUR8zISX60" alt="Ppic"> 
+
+    <%end%>
+  </div>
+
+  <div class = "add-post-form rounded">
+    <form>
+    <div class = "m-3">
+    ADD COMMENT
+    </div>
+    <div class = "m-2">
+    <input type = "text">
+    </div>
+
+  </div>
+  <div class = "post-list">
+    0 REVIEWS
+  </div>
+
+
+</div>
+
+
+<%= render "user_sidebar"%>
+
+
+</div>
+
