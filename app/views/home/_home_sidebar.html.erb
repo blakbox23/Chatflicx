@@ -18,6 +18,7 @@
 
   <div class = "user-txt m-3 ">
     <p><%= follower.email%></p>
+    <%= button_to("Follow", {controller: 'followings', action: 'create', friend_id: follower.id}, method: :post)%>
   </div>
  
   </div>
