@@ -38,8 +38,25 @@
         <p><strong><%= opinion.user.fullname %></strong></p>
         <p class="small"><%= opinion.text%></p>
       </div>
+
+      <div class = "ms-auto border p-3">
+    
+      <%if !Vote.find_by(user_id: current_user, opinion_id: opinion.id)%>
+      <%= link_to({controller: 'votes', action: 'create', op_id: opinion.id}, method: :post) do %>
+        <i class="bi bi-star emt-str"></i>
+        <%end%>
+        <%else%>
+        <%= link_to({controller: 'votes', action: 'create', op_id: opinion.id}, method: :post) do %>
+          <i class="bi bi-star-fill emt-str"></i>
+          <%end%>
+
+        <%end%>
+      <div> <%= opinion.votes.count%> Votes </div>
+      </div>
       
     </div>
+
+  
     <hr>
     <%end%>
 

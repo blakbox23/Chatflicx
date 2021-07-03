@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :following_users, through: :followings, source: :followed
   has_many :inverse_followings, class_name: 'Following', foreign_key: 'followed_id'
   has_many :followers, through: :inverse_followings, source: :follower
+  has_many :votes
 
   def users_to_follow
     User.where.not(id: Array.wrap(following_users)).and(User.where.not(id: id))
