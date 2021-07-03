@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
-  resources :home
+  resources :home do
+    resources :votes, only: [:create, :destroy]
+  end
   resource :followings, only: [:create]
 
 
