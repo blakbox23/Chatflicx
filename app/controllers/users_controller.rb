@@ -5,5 +5,6 @@ class UsersController < ApplicationController
       @opinions = current_user.opinions.order_by_most_recent
     end
 
+
  
 end
