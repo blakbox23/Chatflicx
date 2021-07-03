@@ -10,6 +10,9 @@
   <%end%>
 
   <p class= "profile-text"><%= @user.fullname%><p>
+  <%if current_user.users_to_follow.include?(@user)%>
+  <%= button_to("Follow", {controller: 'followings', action: 'create', friend_id: @user.id}, method: :post)%>
+  <%end%>
   </div>
 
 </div>
