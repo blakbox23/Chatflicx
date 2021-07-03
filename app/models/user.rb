@@ -13,4 +13,8 @@ class User < ApplicationRecord
   def users_to_follow
     User.where.not(id: Array.wrap(following_users)).and(User.where.not(id: id))
   end
+
+  def timeline_opinions
+    Opinion.where(user: (following_users.to_a << self)).order_by_most_recent 
+  end
 end

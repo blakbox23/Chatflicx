@@ -16,15 +16,33 @@
       </div>
 
     </div>
+
     <div class = "post-list">
     <%= @count%> REVIEWS
+    <hr>
 
     <%@opinions.each do |opinion| %>
-      <%= opinion.text%>
-      <%end%>
+    <div class="post-details d-flex m-2 ">
+    
+      <div class="post-image">
+        <%if current_user.photo%>
+        <%= image_tag(current_user.photo, class: "border-rounded") %> 
+        <%else%>
+        <img class = "border-rounded" src="https://source.unsplash.com/DrVJk1EaPSc" alt="Ppic"> 
+        <%end%>
+      </div>
+
+
+      <div class ="post-txt">
+        <p><strong><%= opinion.user.fullname %></strong></p>
+        <p class="small"><%= opinion.text%></p>
+      </div>
+      
     </div>
+    <hr>
+    <%end%>
 
-
+  </div>
   </div>
 
 

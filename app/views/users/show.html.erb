@@ -10,21 +10,33 @@
     <%end%>
   </div>
 
-  <div class = "add-post-form rounded">
-    <form>
-    <div class = "m-3">
-    ADD COMMENT
-    </div>
-    <div class = "m-2">
-    <input type = "text">
-    </div>
 
-  </div>
   <div class = "post-list">
-    0 REVIEWS
+  <%= @count%> REVIEWS
+  <hr>
+
+  <%@opinions.each do |opinion| %>
+  <div class="post-details d-flex m-2 ">
+  
+    <div class="post-image">
+      <%if current_user.photo%>
+      <%= image_tag(current_user.photo, class: "border-rounded") %> 
+      <%else%>
+      <img class = "border-rounded" src="https://source.unsplash.com/DrVJk1EaPSc" alt="Ppic"> 
+      <%end%>
+    </div>
+
+
+    <div class ="post-txt">
+      <p><strong><%= opinion.user.fullname %></strong></p>
+      <p class="small"><%= opinion.text%></p>
+    </div>
+    
   </div>
+  <hr>
+  <%end%>
 
-
+</div>
 </div>
 
 
