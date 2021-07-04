@@ -46,7 +46,7 @@
         <i class="bi bi-star emt-str"></i>
         <%end%>
         <%else%>
-        <%= link_to({controller: 'votes', action: 'create', op_id: opinion.id}, method: :post) do %>
+        <%= link_to vote_path(id: opinion.id), method: :delete do %>
           <i class="bi bi-star-fill emt-str"></i>
           <%end%>
 
