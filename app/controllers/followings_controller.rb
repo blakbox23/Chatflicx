@@ -11,4 +11,18 @@ class FollowingsController < ApplicationController
         end
         redirect_to root_path
     end
+
+    def destroy
+        user = User.find(params[:friend_id])
+        follower = current_user.followings.find_by(followed_id: user.id)
+
+        if follower.destroy
+            flash[:notice] = "Unfollow successful"
+        else
+            flash[:alert] = "Sorry, Unable to unfollow"
+        end
+        redirect_to root_path
+    end
+
+
 end

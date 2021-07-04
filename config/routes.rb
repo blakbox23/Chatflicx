@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :opinion 
   resources :votes, only: [:create, :destroy]
-  resource :followings, only: [:create]
+  resource :followings, only: [:create, :destroy]
 
 
   get 'home/index'
