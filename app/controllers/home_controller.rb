@@ -5,6 +5,7 @@ class HomeController < ApplicationController
     @opinion = Opinion.new
     @opinions = current_user.timeline_opinions
     @count = @opinions.count
+    
   end
 
 

@@ -9,6 +9,7 @@
     position: relative;
     width: 80%;
     left: 20%;
+    min-height: 100vh;
     top: 2rem;
     display: grid;
     grid-template-columns: 3fr 1.5fr;
@@ -22,7 +23,7 @@
 }
 */
 .home-side {
-  border-left: 1px solid grey;
+  border-left: 1px solid rgb(202, 190, 190);
 } 
 
 .home-center-header, .home-side-header {
@@ -110,6 +111,8 @@
 
 .post-txt p{
   line-height: 0.7rem;
+  text-decoration: none;
+
 }
 
 .emt-str {
