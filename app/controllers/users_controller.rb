@@ -6,5 +6,23 @@ class UsersController < ApplicationController
     end
 
 
+    def update
+      @user = current_user
+      if @user.update(update_params)
+        
+        flash[:notice] = "you're profile has been successfully updated"
+        redirect_to home_index_path
+      else
+        flash[:alert] = "Profile update unsuccessful"
+      end
+      redirect_to root
+    end
+
+    private
+
+    def update_params
+      params.require(:user).permit(:username, :fullname, :photo, :coverimage)
+    end
+
  
 end
