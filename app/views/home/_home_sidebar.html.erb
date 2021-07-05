@@ -12,13 +12,18 @@
   <%if follower.photo%>
   <%= image_tag(follower.photo, class: "rounded-circle") %> 
   <%else%>
-  <img class = "rounded-circle"" src="https://source.unsplash.com/DrVJk1EaPSc" alt="Ppic"> 
+  <img src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48bGluZWFyR3JhZGllbnQgaWQ9ImEiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAtMTk0MzApIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAiIHgyPSI1MTIiIHkxPSItMTk2ODYiIHkyPSItMTk2ODYiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwZjM4ZCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwOWVmZiIvPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZD0ibTUxMiAyNTZjMCAxNDEuMzg2NzE5LTExNC42MTMyODEgMjU2LTI1NiAyNTZzLTI1Ni0xMTQuNjEzMjgxLTI1Ni0yNTYgMTE0LjYxMzI4MS0yNTYgMjU2LTI1NiAyNTYgMTE0LjYxMzI4MSAyNTYgMjU2em0wIDAiIGZpbGw9InVybCgjYSkiLz48cGF0aCBkPSJtMzE0LjIwMzEyNSAyNDcuOTM3NWMyMy41MTU2MjUtMTcuNzEwOTM4IDM4Ljc1LTQ1Ljg1MTU2MiAzOC43NS03Ny40ODgyODEgMC01My40NTcwMzEtNDMuNDkyMTg3LTk2Ljk0OTIxOS05Ni45NTMxMjUtOTYuOTQ5MjE5LTUzLjQ1NzAzMSAwLTk2Ljk0OTIxOSA0My40OTIxODgtOTYuOTQ5MjE5IDk2Ljk0OTIxOSAwIDMxLjYzNjcxOSAxNS4yMzA0NjkgNTkuNzc3MzQzIDM4Ljc0NjA5NCA3Ny40ODgyODEtNjIuOTYwOTM3IDIzLjYzMjgxMi0xMDcuODk0NTMxIDg0LjQ0NTMxMi0xMDcuODk0NTMxIDE1NS41NjI1aDMwYzAtNzUuMDQ2ODc1IDYxLjA1NDY4Ny0xMzYuMDk3NjU2IDEzNi4xMDE1NjItMTM2LjA5NzY1NiA3NS4wNDI5NjkgMCAxMzYuMDk3NjU2IDYxLjA1MDc4MSAxMzYuMDk3NjU2IDEzNi4wOTc2NTZoMzBjLS4wMDM5MDYtNzEuMTE3MTg4LTQ0LjkzMzU5My0xMzEuOTI5Njg4LTEwNy44OTg0MzctMTU1LjU2MjV6bS0xMjUuMTUyMzQ0LTc3LjQ4ODI4MWMwLTM2LjkxNzk2OSAzMC4wMzEyNS02Ni45NDkyMTkgNjYuOTQ5MjE5LTY2Ljk0OTIxOXM2Ni45NDkyMTkgMzAuMDMxMjUgNjYuOTQ5MjE5IDY2Ljk0OTIxOS0zMC4wMzEyNSA2Ni45NTMxMjUtNjYuOTQ5MjE5IDY2Ljk1MzEyNS02Ni45NDkyMTktMzAuMDM1MTU2LTY2Ljk0OTIxOS02Ni45NTMxMjV6bTAgMCIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==" />
  <%end%>
   </div>
 
-  <div class = "user-txt m-3 ">
-    <p><%= follower.email%></p>
-    <%= button_to("Follow", {controller: 'followings', action: 'create', friend_id: follower.id}, method: :post)%>
+  <div class = "user-txt m-1 ">
+    <p class="follower_fullname"><%= link_to follower.fullname, user_path(follower.id) %></p>
+
+    <p class="follower_username"><%= follower.username%></p>
+  </div>
+
+  <div class = "ms-auto">
+  <%= button_to("Follow", {controller: 'followings', action: 'create', friend_id: follower.id}, method: :post)%> 
   </div>
  
   </div>

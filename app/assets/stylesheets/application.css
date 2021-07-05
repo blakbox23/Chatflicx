@@ -65,13 +65,17 @@
 
 header {
     background-color: #4ba3e7;
-  
     height: 5.59rem;
     position: fixed;
     top:0;
     right:0;
     z-index: 2;
     width: 80%;
+}
+
+.logo {
+    width: 3.47rem;
+
 }
 
  nav{
@@ -88,7 +92,6 @@ header {
     display:flex;
     align-items: center;
     margin-left: 5px;
-    border-bottom: 1px solid rgb(17, 15, 15);
 }
 
 .profile-pic {
@@ -106,20 +109,23 @@ header {
     color: #afb3b9;
     margin: 5px;
     font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .nav-following {
-    
+    border-top: 1px solid rgb(18, 15, 15);
     justify-content: space-evenly;
     text-align: center;
-    height: 4rem;
     padding: 7px;
-    border-bottom: 1px solid rgb(17, 15, 15);
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgb(18, 15, 15);
 }
 
 
 .nav-num {
     font-weight: bold;
+    font-size: 1.3rem;
 }
 
 .nav-links {
@@ -127,11 +133,20 @@ header {
     flex-direction: column;
     margin-top: 1rem;
     text-align: center;
+    text-transform: uppercase;
+
+}
+
+.nav-links div {
+    /* border: 1px solid red; */
+    height: 4rem;
+    padding-top: 1rem;
 }
 
 .link-txt {
     color:#afb3b9;
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
+    width: 100%;
 }
 
 /* End of Nav */

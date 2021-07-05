@@ -12,9 +12,9 @@
     top: 2rem;
     display: grid;
     grid-template-columns: 3fr 1.5fr;
-    height: 100vh;
     background-color: #ebedf3;
 }
+
 /* 
 .home-center {
   border: 1px solid grey;
@@ -26,8 +26,8 @@
 } 
 
 .home-center-header, .home-side-header {
-  border-bottom: 1px solid grey;
-  height: 4rem;
+  border-bottom: 1px solid rgb(177, 165, 165);
+  height: 4.5rem;
   padding-left: 2rem;
   padding-top: 1.5rem;
 }
@@ -58,12 +58,12 @@
 }
 
 .user {
-    align-items: baseline;
+    align-items: center;
 }
 
 .user-img-container {
-    width: 2.7rem;
-    height: 2.7rem;
+    width: 3rem;
+    height: 3rem;
     
 }
 
@@ -72,13 +72,30 @@
     height:100%;
 }
 
+.follower_fullname {
+ 
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.follower_username {
+  color: grey;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+
+
 // .post-details {
 //   f
 // }
 
 .post-image {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   margin-right: 1rem;
 }
 
