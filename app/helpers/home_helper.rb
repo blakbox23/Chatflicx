@@ -3,7 +3,7 @@ module HomeHelper
         if opinion.user.photo.attached?
         image_tag(opinion.user.photo, class: "border-rounded") 
         else
-        image_tag("https://via.placeholder.com/120")
+        image_tag("/assets/profiles/user.png")
         end
     end
 
@@ -11,7 +11,7 @@ module HomeHelper
         if follower.photo.attached?
           image_tag(follower.photo, class: "rounded-circle") 
         else
-          image_tag("https://via.placeholder.com/120")
+          image_tag("/assets/profiles/user-side.png")
        end
     end
 end
