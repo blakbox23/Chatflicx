@@ -37,16 +37,9 @@
 
       <div class = "ms-auto border p-3">
     
-      <%if !Vote.find_by(user_id: current_user, opinion_id: opinion.id)%>
-      <%= link_to({controller: 'votes', action: 'create', op_id: opinion.id}, method: :post) do %>
-        <i class="bi bi-star emt-str"></i>
-        <%end%>
-        <%else%>
-        <%= link_to vote_path(id: opinion.id), method: :delete do %>
-          <i class="bi bi-star-fill emt-str"></i>
-          <%end%>
-
-        <%end%>
+      <%= vote_btn(opinion)%>
+     
+       
       <div> <%= opinion.votes.count%> Votes </div>
       </div>
       
