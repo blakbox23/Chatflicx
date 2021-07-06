@@ -2,31 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
 /* Main */
 .home-container {
-    /* border: 1px solid black; */
-    position: relative;
-    width: 80%;
-    left: 20%;
-    min-height: 100vh;
-    top: 2rem;
-    display: grid;
-    grid-template-columns: 3fr 1.5fr;
-    background-color: #ebedf3;
+  /* border: 1px solid black; */
+  position: relative;
+  width: 80%;
+  left: 20%;
+  min-height: 100vh;
+  top: 2rem;
+  display: grid;
+  grid-template-columns: 3fr 1.5fr;
+  background-color: #ebedf3;
 }
 
-/* 
+/*
 .home-center {
   border: 1px solid grey;
-  
+
 }
 */
 .home-side {
   border-left: 1px solid rgb(202, 190, 190);
-} 
+}
 
-.home-center-header, .home-side-header {
+.home-center-header,
+.home-side-header {
   border-bottom: 1px solid rgb(177, 165, 165);
   height: 4.5rem;
   padding-left: 2rem;
@@ -36,45 +36,42 @@
 .add-post-form {
   border: 1px solid rgb(175, 165, 165);
   width: 94%;
-  margin:1.7rem auto;
+  margin: 1.7rem auto;
   padding: 0.5rem;
   background: #fff;
 }
 
 .add-post-form input {
-    width: 100%;
+  width: 100%;
 }
 
 .post-list {
-    border: 1px solid rgb(175, 165, 165);
-    width: 94%;
-    margin:1.7rem auto;
-    padding: 0.5rem;
-    background: #fff;
+  border: 1px solid rgb(175, 165, 165);
+  width: 94%;
+  margin: 1.7rem auto;
+  padding: 0.5rem;
+  background: #fff;
 }
 
 .users-list {
-   
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .user {
-    align-items: center;
+  align-items: center;
 }
 
 .user-img-container {
-    width: 3rem;
-    height: 3rem;
-    
+  width: 3rem;
+  height: 3rem;
 }
 
 .user-img-container img {
-    width: 100%;
-    height:100%;
+  width: 100%;
+  height: 100%;
 }
 
 .follower_fullname {
- 
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 0;
@@ -87,8 +84,6 @@
   font-size: 1rem;
   margin-left: 10px;
 }
-
-
 
 // .post-details {
 //   f
@@ -107,12 +102,11 @@
 
 .post-txt {
   margin-top: 0.5rem;
-} 
+}
 
-.post-txt p{
+.post-txt p {
   line-height: 0.7rem;
   text-decoration: none;
-
 }
 
 .emt-str {

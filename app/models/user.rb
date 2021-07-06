@@ -4,9 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :username, presence:true
-  validates :fullname, presence:true
-  
+  validates :username, presence: true
+  validates :fullname, presence: true
+
   has_one_attached :photo
   has_one_attached :coverimage
   has_many :opinions, dependent: :destroy
@@ -21,6 +21,6 @@ class User < ApplicationRecord
   end
 
   def timeline_opinions
-    Opinion.where(user: (following_users.to_a << self)).order_by_most_recent 
+    Opinion.where(user: (following_users.to_a << self)).order_by_most_recent
   end
 end

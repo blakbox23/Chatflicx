@@ -14,7 +14,7 @@ describe 'login process', type: :feature do
 
   it 'should not sign in if user is not valid' do
     visit '/users/sign_in'
-    
+
     fill_in 'Email', with: 'peter@gmail.com'
     fill_in 'Password', with: '123456'
     click_button 'Log in'

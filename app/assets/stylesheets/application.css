@@ -14,139 +14,133 @@
  *= require_self
  */
 
- /* Login  */
- 
+/* Login  */
+
 .alert {
-    background-color: #e4d0d0;
-    margin: 0;
+  background-color: #e4d0d0;
+  margin: 0;
 }
+
 .notice {
-    margin: 0;
-}
- .login-bg {
-    width: 100%;
-    height: calc(100vh - 5rem);
-    background-image: url('https://source.unsplash.com/Lq6rcifGjOU');
-    background-repeat: no-repeat;
-    background-size: cover; 
-  
-    display: fixed;
-    top: 0;
-    bottom: 0;
-
-
+  margin: 0;
 }
 
- .login-form {
-     
-     color: rgb(209, 194, 194);
-     background-color: rgba(0, 0, 0, 0.9);
-     width: 45%;
-     text-align: center;
-     padding: 3.5rem;
-     z-index: 2;
-     margin: auto;
-     font-size: 1.5rem;
- 
- }
+.login-bg {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  background-image: url('https://source.unsplash.com/Lq6rcifGjOU');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
 
- .field {
-     margin: 2rem;
- }
- .field input {
-     margin-top: 0.7rem;
- }
+.login-form {
+  color: rgb(209, 194, 194);
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 45%;
+  text-align: center;
+  padding: 3.5rem;
+  z-index: 2;
+  margin: auto;
+  font-size: 1.5rem;
+}
 
- /* End of login */
+.field {
+  margin: 2rem;
+}
 
- a{
-   text-decoration: none;
- }
+.field input {
+  margin-top: 0.7rem;
+}
+
+/* End of login */
+
+a {
+  text-decoration: none;
+}
 
 header {
-    background-color: #4ba3e7;
-    height: 5.59rem;
-    position: fixed;
-    top:0;
-    right:0;
-    z-index: 2;
-    width: 80%;
+  background-color: #4ba3e7;
+  height: 5.59rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 80%;
 }
 
 .logo {
-    width: 3.47rem;
-
+  width: 3.47rem;
 }
 
- nav{
-    background-color: #1c2c3d;
-    width: 20%;
-    position : fixed;
-    left: 0;
-    top:0;
-    bottom:0;
-    
+nav {
+  background-color: #1c2c3d;
+  width: 20%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .nav-profile {
-    display:flex;
-    align-items: center;
-    margin-left: 5px;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
 }
 
 .profile-pic {
-    margin: 7px 7px 10px;
-    width:4.5rem;
-    height: 4.5rem;
+  margin: 7px 7px 10px;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
-.profile-pic img{
-    width: 100%;
-    height: 100%;
+.profile-pic img {
+  width: 100%;
+  height: 100%;
 }
 
 .profile-name {
-    color: #afb3b9;
-    margin: 5px;
-    font-size: 1rem;
-    text-transform: uppercase;
+  color: #afb3b9;
+  margin: 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .nav-following {
-    border-top: 1px solid rgb(18, 15, 15);
-    justify-content: space-evenly;
-    text-align: center;
-    padding: 7px;
-    text-transform: uppercase;
-    font-size: 0.95rem;
-    border-bottom: 1px solid rgb(18, 15, 15);
+  border-top: 1px solid rgb(18, 15, 15);
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 7px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgb(18, 15, 15);
 }
 
-
 .nav-num {
-    font-weight: bold;
-    font-size: 1.3rem;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 .nav-links {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    text-align: center;
-    text-transform: uppercase;
-
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .nav-links div {
-    /* border: 1px solid red; */
-    height: 4rem;
-    padding-top: 1rem;
+  /* border: 1px solid red; */
+  height: 4rem;
+  padding-top: 1rem;
 }
 
 .link-txt {
-    color:#afb3b9;
-    font-family:Arial, Helvetica, sans-serif;
-    width: 100%;
+  color: #afb3b9;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 
 /* End of Nav */

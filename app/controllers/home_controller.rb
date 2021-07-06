@@ -1,13 +1,10 @@
 class HomeController < ApplicationController
-  
   before_action :authenticate_user!
   def index
     @opinion = Opinion.new
     @opinions = current_user.timeline_opinions
     @count = @opinions.count
-    
   end
-
 
   def create
     @opinion = current_user.opinions.build(opinions_params)
@@ -21,7 +18,7 @@ class HomeController < ApplicationController
   end
 
   private
-  
+
   def opinions_params
     params.require(:opinion).permit(:text)
   end
