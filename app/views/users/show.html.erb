@@ -3,21 +3,12 @@
 <div class ="home-center">
 
   <div class = "user-banner">
-    <%if @user.coverimage.attached?%>
-    <%= image_tag(@user.coverimage, class: 'banner-pic')%>
-    <%else%>
-    <img class = "banner-pic" src="https://source.unsplash.com/CiUR8zISX60" alt="Ppic"> 
-
-    <%end%>
+   <%= show_banner(@user) %>
     
-    <%if current_user == @user%>
     <div class = "edit-btn">
-    <%= link_to edit_user_registration_path do%>
-      <i class="bi bi-pencil-fill edit-pen"></i>
-      <%end%>
-
+  <%= show_edit_btn(@user) %>
     </div>
-    <%end%>
+   
   </div>
   
 

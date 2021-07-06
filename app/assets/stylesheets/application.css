@@ -27,19 +27,19 @@
 
 .login-bg {
   width: 100%;
-  height: calc(100vh - 5rem);
-  background-image: url('https://source.unsplash.com/Lq6rcifGjOU');
+  height: 100vh;
+  background-image: url('https://source.unsplash.com/CTbTIyZOk88');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   position: fixed;
   top: 0;
   bottom: 0;
 }
 
 .login-form {
-  color: rgb(209, 194, 194);
-  background-color: rgba(0, 0, 0, 0.9);
-  width: 45%;
+  background-color: rgb(255, 255, 255);
+  width: 34%;
   text-align: center;
   padding: 3.5rem;
   z-index: 2;
@@ -53,6 +53,9 @@
 
 .field input {
   margin-top: 0.7rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(68, 73, 121);
 }
 
 /* End of login */

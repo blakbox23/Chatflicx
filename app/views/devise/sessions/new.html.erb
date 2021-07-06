@@ -1,8 +1,9 @@
 
 <div class = "login-bg">
-<h2>Log in</h2>
 
-<div class = "login-form" >
+<h2 class = "text-center mt-5">Log in</h2>
+<div class = "login-form rounded" >
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
  
   <div class="field">
@@ -22,8 +23,8 @@
     </div>
   <% end %>
 
-  <div class="actions field">
-    <%= f.submit "Log in" %>
+  <div>
+    <%= f.submit "Log in", class: "btn btn-primary fs-4 mb-3" %>
   </div>
 <% end %>
 
