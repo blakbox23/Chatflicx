@@ -8,7 +8,7 @@ class FollowingsController < ApplicationController
     else
       flash[:alert] = 'Sorry, follow unsuccessful'
     end
-    redirect_to root_path
+    redirect_to request.referrer
   end
 
   def destroy
@@ -20,6 +20,6 @@ class FollowingsController < ApplicationController
     else
       flash[:alert] = 'Sorry, Unable to unfollow'
     end
-    redirect_to root_path
+    redirect_to request.referrer
   end
 end

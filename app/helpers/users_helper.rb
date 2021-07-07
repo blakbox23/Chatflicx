@@ -13,13 +13,11 @@ module UsersHelper
     if @user.coverimage.attached?
       image_tag(user.coverimage, class: 'banner-pic')
     else
-      image_tag('https://source.unsplash.com/_kUxT8WkoeY', class: "banner-pic")
+      image_tag('https://source.unsplash.com/_kUxT8WkoeY', class: 'banner-pic')
     end
   end
 
   def show_edit_btn(user)
-    if current_user == user
-       link_to "<i class='bi bi-pencil-fill edit-pen'></i>".html_safe, edit_user_registration_path    
-      end
+    link_to "<i class='bi bi-pencil-fill edit-pen'></i>".html_safe, edit_user_registration_path if current_user == user
   end
 end
