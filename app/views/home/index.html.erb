@@ -9,17 +9,17 @@
     <div class = "add-post-form rounded">
       <%= form_with model: @opinion, url: "/home", method: :post do |f| %>
       <div class = "m-3">
-      ADD COMMENT
+      What is your opinion
       </div>
       <div class = "m-2">
-      <%= f.text_field :text, placeholder: "Post review"%>
+      <%= f.text_field :text, placeholder: "Post opinion"%>
       <%= f.submit "Post", class: "d-none"%>
       </div>
     <%end%>
     </div>
 
     <div class = "post-list">
-    <%= @count%> REVIEWS
+    <%= @count%> OPINIONS
     <hr>
 
     <%@opinions.each do |opinion| %>
