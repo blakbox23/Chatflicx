@@ -3,7 +3,7 @@ This is ruby on rails twitter redesign project which allows user to share their 
 
 ![screenshot](app/assets/Homepage.png)
 Home page
-.
+
 
 ![screenshot](app/assets/Userspage.png)
 Users' page
@@ -37,6 +37,10 @@ Clone this repository to get a copy of this project.
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome.
 Fell free to check the [issues page](https://github.com/blakbox23/chatflicx/issues)
+
+## Acknowledgments
+- Unsplash.com
+- Flaticons.com
 
 ## Show your support
 Give a ⭐ if you like this project.
