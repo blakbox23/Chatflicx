@@ -1,17 +1,30 @@
 require 'rails_helper'
 
 RSpec.describe 'User', type: :model do
+
+  it "is valid only with all required attributes" do
+    user1 = build(:user)
+    expect(user1).to be_valid
+  end
   it 'is not valid without an email' do
-    user = User.new(password: '123456', fullname: 'pm', username: 'usname')
-    expect(user.save).to be(false)
+    user1 = build(:user, email: nil)
+    expect(user1).to_not be_valid
+  end
+  it 'is not valid without a fullname' do
+    user1 = build(:user, fullname: nil)
+    expect(user1).to_not be_valid
   end
   it 'is not valid without a password' do
-    user = User.new(email: 'p@g.com', fullname: 'pm', username: 'us')
-    expect(user.save).to be(false)
+    user1 = build(:user, password: nil)
+    expect(user1).to_not be_valid
+  end
+  it 'is not valid without a username' do
+    user1 = build(:user, username: nil)
+    expect(user1).to_not be_valid
   end
   it 'is saves each field of the user' do
-    user = User.new(email: 'p@gmail.com', password: '123456', fullname: 'John Doe')
-    expect(user.fullname).to eql('John Doe')
+    user = User.new(email: 'p@gmail.com', password: '123456', fullname: 'Jane Doe')
+    expect(user.fullname).to eql('Jane Doe')
   end
   it 'has many opinions' do
     a = User.reflect_on_association(:opinions)

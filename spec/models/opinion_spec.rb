@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Opinion', type: :model do
-  # it { is_expected.to validate_presence_of :text }
-
-  let(:user) { User.create(email: 'p@gmail.com', username: 'jane', fullname: 'j Doe', password: '123456') }
+  before(:all) do
+    @user1 = build(:user)
+  end
   it 'should belong to a user' do
     a = Opinion.reflect_on_association(:user)
     expect(a.macro).to eq(:belongs_to)
@@ -12,8 +12,10 @@ RSpec.describe 'Opinion', type: :model do
     a = Opinion.reflect_on_association(:votes)
     expect(a.macro).to eq(:has_many)
   end
-
-  # it 'is invalid without text' do
-  #     expect(build(:opinion, text:nil)).to_not be_valid
-  # end
+  it 'validates presence of text' do
+    opinion1 = Opinion.new
+    opinion1.text = " "
+    opinion1.validate
+    expect(opinion1.errors[:text]).to include("can't be blank")
+  end
 end
