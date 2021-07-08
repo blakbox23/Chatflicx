@@ -16,6 +16,8 @@ class User < ApplicationRecord
   has_many :followers, through: :inverse_followings, source: :follower
   has_many :votes, dependent: :destroy
 
+  scope :order_by_most_recent, -> { order(created_at: :desc) }
+
   def users_to_follow
     User.where.not(id: Array.wrap(following_users)).and(User.where.not(id: id))
   end
