@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'User', type: :model do
-
-  it "is valid only with all required attributes" do
+  it 'is valid only with all required attributes' do
     user1 = build(:user)
     expect(user1).to be_valid
   end

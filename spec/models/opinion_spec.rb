@@ -14,7 +14,7 @@ RSpec.describe 'Opinion', type: :model do
   end
   it 'validates presence of text' do
     opinion1 = Opinion.new
-    opinion1.text = " "
+    opinion1.text = ' '
     opinion1.validate
     expect(opinion1.errors[:text]).to include("can't be blank")
   end
