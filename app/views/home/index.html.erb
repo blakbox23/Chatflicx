@@ -22,7 +22,7 @@
     <%= @count%> OPINIONS
     <hr>
 
-    <%@opinions.each do |opinion| %>
+    <%@opinions.includes(:user, :votes).each do |opinion| %>
     <div class="post-details d-flex m-2 ">
     
       <div class="post-image">
