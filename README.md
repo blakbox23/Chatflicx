@@ -26,6 +26,9 @@ Clone this repository to get a copy of this project.
 - To setup your the database, run `db:create`, followed by `db:migrate`
 - Finally to view the project, run `rails s`, and visit `http://localhost:3000/` from your browser.
 
+## Tests
+This project also includes testing. To run these tests run  `rspec --format documentation` in your terminal.
+
 ## Author
 
 👤 **Peter Mbuthia**

@@ -9,11 +9,12 @@
     <div class = "add-post-form rounded">
       <%= form_with model: @opinion, url: "/home", method: :post do |f| %>
       <div class = "m-3">
-      What is your opinion
+      
+      <%= f.label :text, "What is your opinion" %><br />
       </div>
       <div class = "m-2">
-      <%= f.text_field :text, placeholder: "Post opinion"%>
-      <%= f.submit "Post", class: "d-none"%>
+      <%= f.text_field :text, placeholder: "Post opinion", id: "post" %>
+      <%= f.submit "Post"%>
       </div>
     <%end%>
     </div>
