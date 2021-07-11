@@ -1,8 +1,5 @@
 require 'rails_helper'
 describe 'login process', type: :feature do
-  before :each do
-    User.create(email: 'p@gmail.com', password: '123456', fullname: 'peter m')
-  end
   it 'signs user in' do
     visit '/users/sign_in'
     fill_in 'Email', with: 'p@gmail.com'
