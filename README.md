@@ -27,7 +27,7 @@ Clone this repository to get a copy of this project.
 - Finally to view the project, run `rails s`, and visit `http://localhost:3000/` from your browser.
 
 ## Tests
-This project also includes testing. To run these tests run  `rspec --format documentation` in your terminal.
+This project also includes testing. To run these tests run  `rspec --format documentation` in your terminal. Make sure you ran `yarn install` first.
 
 ## Author
 
