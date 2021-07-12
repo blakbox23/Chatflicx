@@ -1,3 +1,61 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<%=link_to 'Log in', user_session_path %>
+
+
+<div class = "home-container">
+  <div class ="home-center">
+    <div class = "home-center-header">
+    OPINIONS
+    </div>
+
+    <div class = "add-post-form rounded">
+      <%= form_with model: @opinion, url: "/home", method: :post do |f| %>
+      <div class = "m-3">
+      
+      <%= f.label :text, "What is your opinion" %><br />
+      </div>
+      <div class = "m-2">
+      <%= f.text_field :text, placeholder: "Post opinion", id: "post" %>
+      <%= f.submit "Post"%>
+      </div>
+    <%end%>
+    </div>
+
+    <div class = "post-list">
+    <%= @count%> OPINIONS
+    <hr>
+
+    <%@opinions.includes(:user, :votes).each do |opinion| %>
+    <div class="post-details d-flex m-2 ">
+    
+      <div class="post-image">
+        <%= opinion_check_pic(opinion) %>
+      </div>
+
+
+      <div class ="post-txt">
+        <p><strong><%= link_to opinion.user.fullname, user_path(opinion.user.id), class: 'text-dark' %></strong></p>
+        <p class="small"><%= opinion.text%></p>
+      </div>
+
+      <div class = "ms-auto border p-3">
+    
+      <%= vote_btn(opinion)%>
+     
+       
+      <div> <%= opinion.votes.count%> Votes </div>
+      </div>
+      
+    </div>
+
+  
+    <hr>
+    <%end%>
+
+  </div>
+  </div>
+
+
+  <%= render "home_sidebar"%>
+
+
+</div>
+
