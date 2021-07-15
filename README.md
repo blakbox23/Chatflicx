@@ -1,5 +1,5 @@
 # Chatflicx
-This is ruby on rails twitter redesign project which allows user to share their opinions on movies, or TV series that they enjoy. These opinions can either be upvoted or downvoted by other users.
+This is a ruby on rails twitter redesign for desktops which allows user to share their opinions on movies, or TV series that they enjoy. These opinions can either be upvoted or downvoted by other users.
 
 ![screenshot](app/assets/Homepage.png)
 Home page
