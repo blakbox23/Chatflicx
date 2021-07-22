@@ -24,7 +24,7 @@ Clone this repository to get a copy of this project.
 - Ensure Yarn packages are installed using `yarn install`
 - Ensure the Gem files are also installed by running `bundle install`
 - To setup your the database, run `db:create`, followed by `db:migrate`
-- Finally to view the project, run `rails s`, and visit `http://localhost:3000/` from your browser.
+- Finally to view the project, run `rails s`, and visit `http://localhost:3000` from your favourite browser.
 
 ## Tests
 This project also includes testing. To run these tests run  `rspec --format documentation` in your terminal. Make sure you ran `yarn install` first.
