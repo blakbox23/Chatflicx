@@ -1,0 +1,36 @@
+<div class = "home-container">
+<div class ="home-center">
+<h1>Edit page coming up</h1>
+
+
+  <div class = "post-list">
+    <%= form_with model: @user do |form| %>
+        <div>
+        <%= label_tag (:Photo)%>
+        <%=form.file_field :photo, placeholder: "Profile-pic" %>
+        </div><br>
+        <div>
+        <%= label_tag (:Cover)%>
+        <%=form.file_field :coverimage, placeholder: "Banner" %>
+        </div><br>
+        <div>
+        <%= label_tag (:username)%>
+        <%=form.text_field :username, placeholder: "Username" %>
+        </div><br>
+        <div>
+        <%= label_tag (:fullname)%>
+        <%=form.text_field :fullname, placeholder: "Full name" %>
+        </div><br>
+        <%= form.submit "Update"%>
+
+        <%end%>
+  <hr>
+
+
+
+  </div>
+</div>
+
+
+</div>
+

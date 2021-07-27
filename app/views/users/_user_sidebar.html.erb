@@ -1,0 +1,60 @@
+<div class ="home-side">
+
+  <div class = "user-profile border">
+
+  <div class = "profile-photo">
+  <%= check_pic(@user)%>
+
+
+  <p class= "profile-text "><%= @user.fullname%><p>
+
+   <%= follow_btn(@user) %>
+  </div>
+
+
+</div>
+<div class="user-stats d-flex justify-content-around">
+  <div class=" stat">
+  <p class =" stat-num"><%= @user.opinions.count %></p>
+  <p class="stat-txt">Posts</p>
+  </div>
+  <div class=" stat">
+  <p class =" stat-num"><%= @user.followings.count %></p>
+  <p class="stat-txt">Following</p>
+  </div>
+  <div class="stat">
+  <p class =" stat-num"><%= @user.followers.count %></p>
+  <p class="stat-txt">Followers</p>
+  </div>
+</div>
+
+<div class = "home-side-header">
+  FOLLOWED BY
+</div>
+
+
+<div class = "users-list  ">
+
+<% @followers.each do |follower|%>
+ <div class = "user d-flex">
+
+  <div class = "user-img-container">
+ <%= check_pic(follower)%>
+  </div>
+
+  <div class = "user-txt m-1 ">
+    <p class="follower_fullname"><%= link_to follower.fullname, user_path(follower.id) %></p>
+
+    <p class="follower_username"><%= follower.username%></p>
+  </div>
+
+  <%= follow_btn(follower) %>
+ 
+  </div>
+  
+  <%end%>
+
+</div>
+
+
+</div>

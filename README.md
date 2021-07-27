@@ -1,24 +1,49 @@
-# README
+# Chatflicx
+This is a ruby on rails twitter redesign for desktops which allows users to share their opinions on movies, or TV series that they enjoy. These opinions can either be upvoted or downvoted by other users.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![screenshot](app/assets/Homepage.png)
+Home page
 
-Things you may want to cover:
 
-* Ruby version
+![screenshot](app/assets/Userspage.png)
+Users' page
 
-* System dependencies
+## Built With
+- Ruby on Rails
 
-* Configuration
 
-* Database creation
+## Live Demo
+[Live link](https://secret-atoll-58969.herokuapp.com/)
 
-* Database initialization
 
-* How to run the test suite
+## Getting Started
+Clone this repository to get a copy of this project. 
+- Open your terminal
+- Run `git clone https://github.com/blakbox23/chatflicx.git`
+- Open the project with your favorite code editor.
+- Ensure Yarn packages are installed using `yarn install`
+- Ensure the Gem files are also installed by running `bundle install`
+- To setup your the database, run `db:create`, followed by `db:migrate`
+- Finally to view the project, run `rails s`, and visit `http://localhost:3000` from your favourite browser.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Tests
+This project also includes testing. To run these tests run  `rspec --format documentation` in your terminal. Make sure you ran `yarn install` first.
 
-* Deployment instructions
+## Author
 
-* ...
+👤 **Peter Mbuthia**
+
+- GitHub: [@Blakbox23](https://github.com/blakbox23)
+- Twitter: [@blakbox23](https://twitter.com/blakbox23)
+- LinkedIn: [Peter Mbuthia](https://www.linkedin.com/in/peter-mbuthia)
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome.
+Fell free to check the [issues page](https://github.com/blakbox23/chatflicx/issues)
+
+## Acknowledgments
+- Unsplash.com
+- Flaticons.com
+
+## Show your support
+Give a ⭐ if you like this project.

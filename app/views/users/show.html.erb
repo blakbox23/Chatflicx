@@ -1,0 +1,49 @@
+
+<div class = "home-container">
+<div class ="home-center">
+
+  <div class = "user-banner">
+   <%= show_banner(@user) %>
+    
+    <div class = "edit-btn">
+  <%= show_edit_btn(@user) %>
+    </div>
+   
+  </div>
+  
+
+ 
+  <div class = "home-center-header">
+OPINIONS
+</div>
+
+  <div class = "post-list">
+  <%= @user.opinions.count%> OPINIONS
+  <hr>
+
+  <%@user.opinions.each do |opinion| %>
+  <div class="post-details d-flex m-2 ">
+  
+    <div class="post-image">
+      <%= opinion_check_pic(opinion)%>
+    </div>
+
+
+    <div class ="post-txt">
+      <p><strong><%= @user.fullname %></strong></p>
+      <p class="small"><%= opinion.text%></p>
+    </div>
+    
+  </div>
+  <hr>
+  <%end%>
+
+</div>
+</div>
+
+
+<%= render "user_sidebar"%>
+
+
+</div>
+
